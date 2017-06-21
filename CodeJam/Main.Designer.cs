@@ -34,6 +34,7 @@
             this.solveButton = new System.Windows.Forms.Button();
             this.timeLabel = new System.Windows.Forms.Label();
             this.statusLabel = new System.Windows.Forms.Label();
+            this.problemComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -64,7 +65,7 @@
             // 
             // solveButton
             // 
-            this.solveButton.Location = new System.Drawing.Point(16, 77);
+            this.solveButton.Location = new System.Drawing.Point(12, 153);
             this.solveButton.Name = "solveButton";
             this.solveButton.Size = new System.Drawing.Size(256, 63);
             this.solveButton.TabIndex = 3;
@@ -75,7 +76,7 @@
             // timeLabel
             // 
             this.timeLabel.AutoSize = true;
-            this.timeLabel.Location = new System.Drawing.Point(16, 147);
+            this.timeLabel.Location = new System.Drawing.Point(12, 223);
             this.timeLabel.Name = "timeLabel";
             this.timeLabel.Size = new System.Drawing.Size(0, 13);
             this.timeLabel.TabIndex = 4;
@@ -83,16 +84,25 @@
             // statusLabel
             // 
             this.statusLabel.AutoSize = true;
-            this.statusLabel.Location = new System.Drawing.Point(16, 58);
+            this.statusLabel.Location = new System.Drawing.Point(12, 134);
             this.statusLabel.Name = "statusLabel";
             this.statusLabel.Size = new System.Drawing.Size(0, 13);
             this.statusLabel.TabIndex = 5;
+            // 
+            // problemComboBox
+            // 
+            this.problemComboBox.FormattingEnabled = true;
+            this.problemComboBox.Location = new System.Drawing.Point(50, 37);
+            this.problemComboBox.Name = "problemComboBox";
+            this.problemComboBox.Size = new System.Drawing.Size(222, 21);
+            this.problemComboBox.TabIndex = 6;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.problemComboBox);
             this.Controls.Add(this.statusLabel);
             this.Controls.Add(this.timeLabel);
             this.Controls.Add(this.solveButton);
@@ -114,6 +124,7 @@
         private System.Windows.Forms.Button solveButton;
         private System.Windows.Forms.Label timeLabel;
         private System.Windows.Forms.Label statusLabel;
+        private System.Windows.Forms.ComboBox problemComboBox;
     }
 }
 

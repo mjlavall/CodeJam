@@ -8,11 +8,13 @@ namespace CodeJam
 {
     public class Problem : IProblem
     {
-        List<string> Input { get; set; }
+        protected List<string> Input { get; set; }
+        public int T { get; set; }
 
         public Problem(List<string> input)
         {
             Input = input;
+            T = int.Parse(Input[0]);
         }
 
         public virtual List<string> Solve()

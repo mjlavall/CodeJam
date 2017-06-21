@@ -17,6 +17,11 @@ namespace CodeJam
         public Main()
         {
             InitializeComponent();
+            foreach(var e in Enum.GetValues(typeof(ProblemFactory.ProblemRound)))
+            {
+                problemComboBox.Items.Add(e);
+            }
+            problemComboBox.SelectedIndex = 0;
         }
 
         private void ofdButton_Click(object sender, EventArgs e)
@@ -26,7 +31,7 @@ namespace CodeJam
             {
                 Title = "Select and input file",
                 Filter = "Input File | *.in",
-                InitialDirectory = @"C:\Users\mlavalley\Downloads"
+                InitialDirectory = @"C:\Users\Michael\Downloads"
             };
             if (ofd.ShowDialog() == DialogResult.OK)
             {
@@ -43,7 +48,8 @@ namespace CodeJam
             statusLabel.Text = "Processing...";
             solveButton.Enabled = false;
             if (Input == null) return;
-            var problem = new _2017.QualA(Input);
+            if (problemComboBox.SelectedItem == null) return;
+            var problem = ProblemFactory.CreateProblem((ProblemFactory.ProblemRound)problemComboBox.SelectedItem, Input);
             var sfd = new SaveFileDialog
             {
                 FileName = $"{ofdTextBox.Text}-solution.txt",

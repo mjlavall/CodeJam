@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="2017\QualB.cs" />
     <Compile Include="2017\QualA.cs" />
     <Compile Include="IProblem.cs" />
     <Compile Include="Main.cs">
@@ -54,6 +55,7 @@
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Problem.cs" />
+    <Compile Include="ProblemFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Main.resx">
